@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'components/appBar.dart';
 import 'firebase_options.dart';
 import './views/homePage.dart';
 import './views/productsPage.dart';
@@ -54,27 +55,30 @@ class _MyAppState extends State<MyApp> {
       darkTheme: darkTheme, // Use the dark theme
       themeMode: _themeMode, // Use the current theme mode
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('App Title', style: Theme.of(context).textTheme.headline2),
-        ),
+        appBar: CustomAppBar(title: 'App Title'),
         drawer: Drawer(
+          backgroundColor: _themeMode == ThemeMode.light ? light5 : dark2, // White in light mode, black in dark mode
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor, // Use the primary color from the theme
+                  color: _themeMode == ThemeMode.light ? light3 : dark1,
                 ),
                 child: Text(
                   'Drawer Header',
                   style: TextStyle(
-                    color: Theme.of(context).textTheme.headline1?.color, // Use the headline1 color from the theme
+                    color: _themeMode == ThemeMode.light ? light5 : light5,
                     fontSize: 24,
                   ),
                 ),
               ),
               ListTile(
-                title: Text('Dark Mode'),
+                title: Text('Dark Mode',
+                  style: TextStyle(
+                    color: _themeMode == ThemeMode.dark ? light5 : dark1, // light5 in dark mode, default in light mode
+                  ),
+                ),
                 trailing: Switch(
                   value: _themeMode == ThemeMode.dark,
                   onChanged: (val) {
@@ -86,6 +90,9 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
+
+
+
         body: IndexedStack(
           index: _selectedIndex,
           children: _pages,

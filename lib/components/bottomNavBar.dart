@@ -19,11 +19,14 @@ class CustomBottomNavBar extends StatefulWidget {
 class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   @override
   Widget build(BuildContext context) {
+    // Determine the theme mode to apply the correct colors
+    var isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: bottomNavBarBackgroundColor,
-      selectedItemColor: bottomNavBarSelectedItemColor,
-      unselectedItemColor: bottomNavBarUnselectedItemColor,
+      backgroundColor: isDarkMode ? dark1 : light3,
+      selectedItemColor: isDarkMode ? light5 : light1,
+      unselectedItemColor: isDarkMode ? dark3 : dark1,
       currentIndex: widget.currentIndex,
       onTap: widget.onItemSelected,
       items: const [

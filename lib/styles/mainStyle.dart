@@ -1,79 +1,74 @@
 import 'package:flutter/material.dart';
 
-// Define the color palette
-const Color _darkPrimary = Color(0xFF0d1b2a);
-const Color _darkSecondary = Color(0xFF1b263b);
-const Color _darkAccent = Color(0xFF415a77);
-const Color _lightPrimary = Color(0xFF778da9);
-const Color _lightSecondary = Color(0xFFe0e1dd);
+// Light Mode Colors
+const Color light1 = Color(0xFFBFD7EA); //primary
+const Color light2 = Color(0xFF91AEC1); //secondary
+const Color light3 = Color(0xFF508CA4); //3th
+const Color light4 = Color(0xFF005453); //4th
+const Color light5 = Color(0xFFFFFFFF); //5th
 
-// Define the colors for the bottom navigation bar directly
-const Color bottomNavBarBackgroundColor = _lightPrimary;
-const Color bottomNavBarSelectedItemColor = _darkPrimary;
-const Color bottomNavBarUnselectedItemColor = _darkAccent;
+// Dark Mode Colors
+const Color dark1 = Color(0xFF3d3d3d);
+const Color dark2 = Color(0xFF2A4A5B);
+const Color dark3 = Color(0xFF2D5A6D);
+const Color dark4 = Color(0xFF002829);
+const Color dark5 = Color(0xFF767676);
 
 // Light Theme
 final ThemeData lightTheme = ThemeData(
-  brightness: Brightness.light,
-  primaryColor: _lightPrimary,
-  scaffoldBackgroundColor: _lightSecondary,
+  primaryColor: light3,
+  scaffoldBackgroundColor: light5,
   appBarTheme: AppBarTheme(
-    color: _lightPrimary,
-    iconTheme: IconThemeData(color: _darkPrimary),
+    color: light5,
+    iconTheme: IconThemeData(color: dark1),
   ),
   colorScheme: ColorScheme.light(
-    primary: _lightPrimary,
-    secondary: _darkAccent,
-    surface: Colors.white,
-    onPrimary: _darkPrimary,
-    onSecondary: _darkPrimary,
-    onSurface: _darkPrimary,
-    error: Colors.red.shade800, // Customize as needed
+    primary: light1,
+    secondary: light3,
+    surface: light5,
+    onPrimary: dark1,
+    onSecondary: dark2,
+    onSurface: dark3,
+    error: Colors.red.shade800,
   ),
   textTheme: TextTheme(
-    headline1: TextStyle(color: _lightPrimary),
-    headline2: TextStyle(color: _lightPrimary),
-    bodyText1: TextStyle(color: _lightPrimary),
-    bodyText2: TextStyle(color: _lightPrimary),
+    headline1: TextStyle(color: light1),
+    headline2: TextStyle(color: light2),
+    bodyText1: TextStyle(color: light3),
+    bodyText2: TextStyle(color: light4),
   ),
   buttonTheme: ButtonThemeData(
-    buttonColor: _lightPrimary,
+    buttonColor: light1,
     textTheme: ButtonTextTheme.primary,
   ),
-  // Add other customizations for the light theme here
 );
-
-
 
 // Dark Theme
 final ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
-  primaryColor: _darkPrimary,
-  scaffoldBackgroundColor: _darkSecondary,
+  primaryColor: dark1,
+  scaffoldBackgroundColor: dark1,
   appBarTheme: AppBarTheme(
-    color: _darkPrimary,
-    iconTheme: IconThemeData(color: _lightSecondary),
+    color: dark1,
+    iconTheme: IconThemeData(color: light3),
   ),
   colorScheme: ColorScheme.dark(
-    primary: _darkPrimary,
-    secondary: _lightSecondary,
-    surface: _darkSecondary,
-    onPrimary: _lightSecondary,
-    onSecondary: _lightSecondary,
-    onSurface: _lightSecondary,
-    error: Colors.red.shade200, // Customize as needed
+    primary: dark1,
+    secondary: dark3,
+    surface: dark4,
+    onPrimary: light2,
+    onSecondary: light3,
+    onSurface: light4,
+    error: Colors.red.shade200,
   ),
   textTheme: TextTheme(
-    headline1: TextStyle(color: _lightSecondary),
-    headline2: TextStyle(color: _lightSecondary),
-    bodyText1: TextStyle(color: _lightSecondary),
-    bodyText2: TextStyle(color: _lightSecondary),
+    headline1: TextStyle(color: dark2),
+    headline2: TextStyle(color: dark3),
+    headline3: TextStyle(color: light5),
+    bodyText1: TextStyle(color: dark4),
+    bodyText2: TextStyle(color: light5),
   ),
   buttonTheme: ButtonThemeData(
-    buttonColor: _darkAccent,
+    buttonColor: dark3,
     textTheme: ButtonTextTheme.primary,
   ),
-
-  // Add other customizations for the dark theme here
 );
-

@@ -1,10 +1,10 @@
-// custom_app_bar.dart
 import 'package:flutter/material.dart';
+
+import '../styles/mainStyle.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
 
-  // You can also pass other parameters if needed
   CustomAppBar({Key? key, required this.title}) : super(key: key);
 
   @override
@@ -12,15 +12,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
+
     return AppBar(
-      title: Text(title),
+      title: Text(
+        title,
+        style: TextStyle(
+          color: theme.brightness == Brightness.dark ? light5 : dark1, // light5 for dark mode, dark1 for light mode
+        ),
+      ),
+      backgroundColor: theme.primaryColor, // Use the primary color of the theme
+      iconTheme: theme.appBarTheme.iconTheme,
       leading: IconButton(
         icon: const Icon(Icons.menu),
         onPressed: () {
-          Scaffold.of(context).openDrawer(); // This requires a Scaffold with a Drawer
+          Scaffold.of(context).openDrawer();
         },
       ),
-      // Add more AppBar properties if needed
     );
   }
 }
