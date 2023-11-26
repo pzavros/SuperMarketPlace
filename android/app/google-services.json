@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "319353603212",
+    "project_id": "supermarket-place",
+    "storage_bucket": "supermarket-place.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319353603212:android:abad730a967046c908e7a9",
+        "android_client_info": {
+          "package_name": "com.example.supermarketplace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqFoRFJLUBODH99nUz4r9ZQMb3cA5MFRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
