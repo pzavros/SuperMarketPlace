@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
 // Light Mode Colors
-const Color light1 = Color(0xFFBFD7EA); //primary
-const Color light2 = Color(0xFF91AEC1); //secondary
-const Color light3 = Color(0xFF508CA4); //3th
-const Color light4 = Color(0xFF005453); //4th
-const Color light5 = Color(0xFFFFFFFF); //5th
+const Color light1 = Color(0xFFFFD83D); //primary
+const Color light2 = Color(0xFFFF8400); //secondary
+const Color light3 = Color(0xFF5A7C7C); //3th
+const Color light4 = Color(0xFF5A7C7C); //4th
+const Color light5 = Color(0xFFDBDBDB); //5th
 
 // Dark Mode Colors
-const Color dark1 = Color(0xFF3d3d3d);
-const Color dark2 = Color(0xFF2A4A5B);
-const Color dark3 = Color(0xFF2D5A6D);
-const Color dark4 = Color(0xFF002829);
-const Color dark5 = Color(0xFF767676);
+const Color dark1 = Color(0xFF242424);
+const Color dark2 = Color(0xFFFFD83D);
+const Color dark3 = Color(0xFFFF8400);
+const Color dark4 = Color(0xFF83A5A5);
+const Color dark5 = Color(0xFF83A5A5);
 
 // Light Theme
 final ThemeData lightTheme = ThemeData(
-  primaryColor: light3,
+  primaryColor: light5,
   scaffoldBackgroundColor: light5,
   appBarTheme: AppBarTheme(
     color: light5,

@@ -24,9 +24,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: isDarkMode ? dark1 : light3,
-      selectedItemColor: isDarkMode ? light5 : light1,
-      unselectedItemColor: isDarkMode ? dark3 : dark1,
+      backgroundColor: isDarkMode ? dark1 : light5,
+      selectedItemColor: isDarkMode ? light2 : light2,
+      unselectedItemColor: isDarkMode ? light5 : dark1,
       currentIndex: widget.currentIndex,
       onTap: widget.onItemSelected,
       items: const [

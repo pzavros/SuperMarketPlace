@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         title,
         style: TextStyle(
-          color: theme.brightness == Brightness.dark ? light5 : dark1, // light5 for dark mode, dark1 for light mode
+          color: theme.brightness == Brightness.dark ? light4 : dark4, // light5 for dark mode, dark1 for light mode
         ),
       ),
       backgroundColor: theme.primaryColor, // Use the primary color of the theme

@@ -57,22 +57,10 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: CustomAppBar(title: 'App Title'),
         drawer: Drawer(
-          backgroundColor: _themeMode == ThemeMode.light ? light5 : dark2, // White in light mode, black in dark mode
+          backgroundColor: _themeMode == ThemeMode.light ? light5 : dark4, // White in light mode, black in dark mode
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  color: _themeMode == ThemeMode.light ? light3 : dark1,
-                ),
-                child: Text(
-                  'Drawer Header',
-                  style: TextStyle(
-                    color: _themeMode == ThemeMode.light ? light5 : light5,
-                    fontSize: 24,
-                  ),
-                ),
-              ),
               ListTile(
                 title: Text('Dark Mode',
                   style: TextStyle(
